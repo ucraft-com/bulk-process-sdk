@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package bulkprocess;
+
+message BulkProcess {
+  int64 project_id = 1;
+  repeated int64 completed_ids = 2;
+  repeated int64 ids_to_process = 3;
+  Operation operation = 4;
+  Status status = 5;
+  string process_id = 6;
+  Entity entity = 7;
+  repeated int64 failed_ids = 8;
+}
+
+message BulkProcessNotificationRequest {
+  string process_id = 1;
+  repeated int64  completed_Ids = 2;
+  Status status = 3;
+}
+
+enum Operation {
+  CREATE = 0;
+  UPDATE = 1;
+  DELETE = 2;
+  PUBLISH = 3;
+  UN_PUBLISH = 4;
+}
+
+enum Status {
+  IN_PROGRESS = 0;
+  DONE = 1;
+  FAILED = 2;
+}
+
+enum Entity {
+  PRODUCT = 0;
+  CATEGORY = 1;
+  ATTRIBUTE = 2;
+  COLLECTION_ITEM = 3;
+  CUSTOMER = 4;
+  CUSTOMER_GROUP = 5;
+  DISCOUNT = 6;
+  ATTRIBUTE_FAMILY = 7;
+  COLLECTION = 8;
+  PAGE = 9;
+  TEAM = 10;
+}
+
+service BulkProcessService {
+  rpc CreateBulkProcess(CreateBulkProcessRequest) returns (BulkProcess);
+  rpc GetBulkProcessStatus(GetBulkProcessStatusRequest) returns (BulkProcess);
+}
+
+service BulkProcessNotificationService {
+  rpc handleNotification(BulkProcessNotificationRequest) returns (BulkProcess);
+}
+
+message CreateBulkProcessRequest {
+  int64 project_id = 1;
+  repeated int64 ids_to_process = 3;
+  Entity entity = 7;
+  Operation operation = 4;
+}
+
+message GetBulkProcessStatusRequest {
+  string process_id = 1;
+}
