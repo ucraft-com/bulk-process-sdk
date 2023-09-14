@@ -31,6 +31,14 @@ class Operation
      * Generated from protobuf enum <code>UN_PUBLISH = 4;</code>
      */
     const UN_PUBLISH = 4;
+    /**
+     * Generated from protobuf enum <code>MAKE_VISIBLE = 5;</code>
+     */
+    const MAKE_VISIBLE = 5;
+    /**
+     * Generated from protobuf enum <code>MAKE_INVISIBLE = 6;</code>
+     */
+    const MAKE_INVISIBLE = 6;
 
     private static $valueToName = [
         self::CREATE => 'CREATE',
@@ -38,6 +46,8 @@ class Operation
         self::DELETE => 'DELETE',
         self::PUBLISH => 'PUBLISH',
         self::UN_PUBLISH => 'UN_PUBLISH',
+        self::MAKE_VISIBLE => 'MAKE_VISIBLE',
+        self::MAKE_INVISIBLE => 'MAKE_INVISIBLE',
     ];
 
     public static function name($value)

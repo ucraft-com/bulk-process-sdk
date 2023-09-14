@@ -32,6 +32,7 @@ class BulkProcessExecutor
      * @param array                                               $idsToProcess
      * @param \Uc\BulkProcess\BulkProcessExecutor\Enums\Entity    $entity
      * @param \Uc\BulkProcess\BulkProcessExecutor\Enums\Operation $operation
+     * @param string                                              $remoteHost
      *
      * @return \Bulkprocess\BulkProcess
      * @throws \Uc\BulkProcess\BulkProcessExecutor\Exceptions\BulkProcessCreationFailedException
@@ -40,13 +41,15 @@ class BulkProcessExecutor
         int $projectId,
         array $idsToProcess,
         Entity $entity,
-        Operation $operation
+        Operation $operation,
+        string $remoteHost,
     ): BulkProcess {
         $request = new CreateBulkProcessRequest();
         $request->setProjectId($projectId);
         $request->setIdsToProcess($idsToProcess);
         $request->setEntity($entity->value);
         $request->setOperation($operation->value);
+        $request->setRemoteHost($remoteHost);
 
         [$bulkProcess, $status] = $this->client->CreateBulkProcess($request)->wait();
 

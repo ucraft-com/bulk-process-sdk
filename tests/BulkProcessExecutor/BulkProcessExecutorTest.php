@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Uc\BulkProcess\Tests\BulkProcessExecutor;
+namespace Tests\BulkProcessExecutor;
 
 use Bulkprocess\BulkProcess;
 use Grpc\ChannelCredentials;
@@ -10,7 +10,7 @@ use Uc\BulkProcess\BulkProcessExecutor\BulkProcessExecutor;
 use Uc\BulkProcess\BulkProcessExecutor\Client\BulkProcessClient;
 use Uc\BulkProcess\BulkProcessExecutor\Enums\Entity;
 use Uc\BulkProcess\BulkProcessExecutor\Enums\Operation;
-use Uc\BulkProcess\Tests\TestCase;
+use Tests\TestCase;
 
 class BulkProcessExecutorTest extends TestCase
 {
@@ -31,7 +31,8 @@ class BulkProcessExecutorTest extends TestCase
                 5
             ],
             Entity::PRODUCT,
-            Operation::DELETE
+            Operation::DELETE,
+            'builder.ucraft.dev'
         );
 
         $this->assertInstanceOf(BulkProcess::class, $bulkProcess);
@@ -43,6 +44,7 @@ class BulkProcessExecutorTest extends TestCase
         $arrayData = json_decode($jsonString, true);
 
         $this->assertIsArray($arrayData);
+        $this->assertArrayHasKey('processId', $arrayData);
         $this->assertEquals('1', $arrayData['projectId']);
         $this->assertIsString($arrayData['processId']);
     }
@@ -66,7 +68,8 @@ class BulkProcessExecutorTest extends TestCase
                 5
             ],
             Entity::PRODUCT,
-            Operation::DELETE
+            Operation::DELETE,
+            'builder.ucraft.dev'
         );
 
         $bulkProcess = $executor->getBulkProcess($createdBulkProcess->getProcessId());
@@ -82,6 +85,11 @@ class BulkProcessExecutorTest extends TestCase
         return new BulkProcessExecutor(
             new BulkProcessClient('localhost:50051', [
                 'credentials' => ChannelCredentials::createInsecure(),
+                'update_metadata' => function (array $metadata) {
+                    $metadata['Authorization'] = ["Bearer s2q2wVncj?isYcWQcgIuRZY1MawP9Us?sJQVHuM!qsjhqs6yY49ULVVPU!HzQaKMjUsh5vpQ="];
+
+                    return $metadata;
+                }
             ])
         );
     }

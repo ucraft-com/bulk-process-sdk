@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Uc\BulkProcess\Tests;
+namespace Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnit_TestCase;
 

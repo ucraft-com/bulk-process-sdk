@@ -16,56 +16,76 @@ class Entity
      */
     const PRODUCT = 0;
     /**
-     * Generated from protobuf enum <code>CATEGORY = 1;</code>
+     * Generated from protobuf enum <code>EVENT = 1;</code>
      */
-    const CATEGORY = 1;
+    const EVENT = 1;
     /**
-     * Generated from protobuf enum <code>ATTRIBUTE = 2;</code>
+     * Generated from protobuf enum <code>COLLECTION_ITEM = 2;</code>
      */
-    const ATTRIBUTE = 2;
+    const COLLECTION_ITEM = 2;
     /**
-     * Generated from protobuf enum <code>COLLECTION_ITEM = 3;</code>
+     * Generated from protobuf enum <code>CATEGORY = 3;</code>
      */
-    const COLLECTION_ITEM = 3;
+    const CATEGORY = 3;
     /**
-     * Generated from protobuf enum <code>CUSTOMER = 4;</code>
+     * Generated from protobuf enum <code>COLLECTION_CATEGORY = 4;</code>
      */
-    const CUSTOMER = 4;
+    const COLLECTION_CATEGORY = 4;
     /**
-     * Generated from protobuf enum <code>CUSTOMER_GROUP = 5;</code>
+     * Generated from protobuf enum <code>ATTRIBUTE = 5;</code>
      */
-    const CUSTOMER_GROUP = 5;
+    const ATTRIBUTE = 5;
     /**
-     * Generated from protobuf enum <code>DISCOUNT = 6;</code>
+     * Generated from protobuf enum <code>FIELD = 6;</code>
      */
-    const DISCOUNT = 6;
+    const FIELD = 6;
     /**
-     * Generated from protobuf enum <code>ATTRIBUTE_FAMILY = 7;</code>
+     * Generated from protobuf enum <code>COLLECTION = 7;</code>
      */
-    const ATTRIBUTE_FAMILY = 7;
+    const COLLECTION = 7;
     /**
-     * Generated from protobuf enum <code>COLLECTION = 8;</code>
+     * Generated from protobuf enum <code>ATTRIBUTE_FAMILY = 8;</code>
      */
-    const COLLECTION = 8;
+    const ATTRIBUTE_FAMILY = 8;
     /**
-     * Generated from protobuf enum <code>PAGE = 9;</code>
+     * Generated from protobuf enum <code>CUSTOMER = 9;</code>
      */
-    const PAGE = 9;
+    const CUSTOMER = 9;
     /**
-     * Generated from protobuf enum <code>TEAM = 10;</code>
+     * Generated from protobuf enum <code>CUSTOMER_GROUP = 10;</code>
      */
-    const TEAM = 10;
+    const CUSTOMER_GROUP = 10;
+    /**
+     * Generated from protobuf enum <code>PRODUCT_REVIEW = 11;</code>
+     */
+    const PRODUCT_REVIEW = 11;
+    /**
+     * Generated from protobuf enum <code>CART_RULE = 12;</code>
+     */
+    const CART_RULE = 12;
+    /**
+     * Generated from protobuf enum <code>PAGE = 13;</code>
+     */
+    const PAGE = 13;
+    /**
+     * Generated from protobuf enum <code>TEAM = 14;</code>
+     */
+    const TEAM = 14;
 
     private static $valueToName = [
         self::PRODUCT => 'PRODUCT',
-        self::CATEGORY => 'CATEGORY',
-        self::ATTRIBUTE => 'ATTRIBUTE',
+        self::EVENT => 'EVENT',
         self::COLLECTION_ITEM => 'COLLECTION_ITEM',
+        self::CATEGORY => 'CATEGORY',
+        self::COLLECTION_CATEGORY => 'COLLECTION_CATEGORY',
+        self::ATTRIBUTE => 'ATTRIBUTE',
+        self::FIELD => 'FIELD',
+        self::COLLECTION => 'COLLECTION',
+        self::ATTRIBUTE_FAMILY => 'ATTRIBUTE_FAMILY',
         self::CUSTOMER => 'CUSTOMER',
         self::CUSTOMER_GROUP => 'CUSTOMER_GROUP',
-        self::DISCOUNT => 'DISCOUNT',
-        self::ATTRIBUTE_FAMILY => 'ATTRIBUTE_FAMILY',
-        self::COLLECTION => 'COLLECTION',
+        self::PRODUCT_REVIEW => 'PRODUCT_REVIEW',
+        self::CART_RULE => 'CART_RULE',
         self::PAGE => 'PAGE',
         self::TEAM => 'TEAM',
     ];

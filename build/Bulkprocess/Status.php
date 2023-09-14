@@ -12,19 +12,24 @@ use UnexpectedValueException;
 class Status
 {
     /**
-     * Generated from protobuf enum <code>IN_PROGRESS = 0;</code>
+     * Generated from protobuf enum <code>INITIAL = 0;</code>
      */
-    const IN_PROGRESS = 0;
+    const INITIAL = 0;
     /**
-     * Generated from protobuf enum <code>DONE = 1;</code>
+     * Generated from protobuf enum <code>IN_PROGRESS = 1;</code>
      */
-    const DONE = 1;
+    const IN_PROGRESS = 1;
     /**
-     * Generated from protobuf enum <code>FAILED = 2;</code>
+     * Generated from protobuf enum <code>DONE = 2;</code>
      */
-    const FAILED = 2;
+    const DONE = 2;
+    /**
+     * Generated from protobuf enum <code>FAILED = 3;</code>
+     */
+    const FAILED = 3;
 
     private static $valueToName = [
+        self::INITIAL => 'INITIAL',
         self::IN_PROGRESS => 'IN_PROGRESS',
         self::DONE => 'DONE',
         self::FAILED => 'FAILED',

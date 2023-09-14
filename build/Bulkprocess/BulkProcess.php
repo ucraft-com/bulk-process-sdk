@@ -26,13 +26,13 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      */
     private $ids_to_process;
     /**
-     * Generated from protobuf field <code>.bulkprocess.Operation operation = 4;</code>
-     */
-    protected $operation = 0;
-    /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 5;</code>
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      */
     protected $status = 0;
+    /**
+     * Generated from protobuf field <code>.bulkprocess.Operation operation = 5;</code>
+     */
+    protected $operation = 0;
     /**
      * Generated from protobuf field <code>string process_id = 6;</code>
      */
@@ -45,6 +45,10 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated int64 failed_ids = 8;</code>
      */
     private $failed_ids;
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     */
+    protected $remote_host = '';
 
     /**
      * Constructor.
@@ -55,11 +59,12 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      *     @type int|string $project_id
      *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $completed_ids
      *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
-     *     @type int $operation
      *     @type int $status
+     *     @type int $operation
      *     @type string $process_id
      *     @type int $entity
      *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $failed_ids
+     *     @type string $remote_host
      * }
      */
     public function __construct($data = NULL) {
@@ -134,29 +139,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.bulkprocess.Operation operation = 4;</code>
-     * @return int
-     */
-    public function getOperation()
-    {
-        return $this->operation;
-    }
-
-    /**
-     * Generated from protobuf field <code>.bulkprocess.Operation operation = 4;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setOperation($var)
-    {
-        GPBUtil::checkEnum($var, \Bulkprocess\Operation::class);
-        $this->operation = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 5;</code>
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      * @return int
      */
     public function getStatus()
@@ -165,7 +148,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 5;</code>
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -173,6 +156,28 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Bulkprocess\Status::class);
         $this->status = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.bulkprocess.Operation operation = 5;</code>
+     * @return int
+     */
+    public function getOperation()
+    {
+        return $this->operation;
+    }
+
+    /**
+     * Generated from protobuf field <code>.bulkprocess.Operation operation = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOperation($var)
+    {
+        GPBUtil::checkEnum($var, \Bulkprocess\Operation::class);
+        $this->operation = $var;
 
         return $this;
     }
@@ -239,6 +244,28 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
         $this->failed_ids = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     * @return string
+     */
+    public function getRemoteHost()
+    {
+        return $this->remote_host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRemoteHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->remote_host = $var;
 
         return $this;
     }

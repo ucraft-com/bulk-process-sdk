@@ -22,7 +22,11 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
      */
     private $completed_Ids;
     /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 3;</code>
+     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
+     */
+    private $failed_Ids;
+    /**
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      */
     protected $status = 0;
 
@@ -34,6 +38,7 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $process_id
      *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $completed_Ids
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $failed_Ids
      *     @type int $status
      * }
      */
@@ -87,7 +92,29 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 3;</code>
+     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getFailedIds()
+    {
+        return $this->failed_Ids;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setFailedIds($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $this->failed_Ids = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      * @return int
      */
     public function getStatus()
@@ -96,7 +123,7 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.bulkprocess.Status status = 3;</code>
+     * Generated from protobuf field <code>.bulkprocess.Status status = 4;</code>
      * @param int $var
      * @return $this
      */

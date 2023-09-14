@@ -29,6 +29,10 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.bulkprocess.Operation operation = 4;</code>
      */
     protected $operation = 0;
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     */
+    protected $remote_host = '';
 
     /**
      * Constructor.
@@ -40,6 +44,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $entity
      *     @type int $operation
+     *     @type string $remote_host
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +136,28 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Bulkprocess\Operation::class);
         $this->operation = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     * @return string
+     */
+    public function getRemoteHost()
+    {
+        return $this->remote_host;
+    }
+
+    /**
+     * Generated from protobuf field <code>string remote_host = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRemoteHost($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->remote_host = $var;
 
         return $this;
     }
