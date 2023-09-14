@@ -6,6 +6,7 @@ namespace Uc\BulkProcess\BulkProcessExecutor;
 
 use Bulkprocess\BulkProcess;
 use Bulkprocess\CreateBulkProcessRequest;
+use Bulkprocess\GetBulkProcessStatusByIdRequest;
 use Bulkprocess\GetBulkProcessStatusRequest;
 use Uc\BulkProcess\BulkProcessExecutor\Client\BulkProcessClientInterface;
 use Uc\BulkProcess\BulkProcessExecutor\Enums\Entity;
@@ -72,6 +73,26 @@ class BulkProcessExecutor
         $request->setProcessId($processId);
 
         [$bulkProcess, $status] = $this->client->GetBulkProcessStatus($request)->wait();
+
+        if ($status->code !== STATUS_OK) {
+            throw new UnableToGetBulkProcessException();
+        }
+
+        return $bulkProcess;
+    }
+
+    /**
+     * @param array $processIds
+     *
+     * @return \Bulkprocess\BulkProcess
+     * @throws \Uc\BulkProcess\BulkProcessExecutor\Exceptions\UnableToGetBulkProcessException
+     */
+    public function getBulkProcessByIds(array $processIds): BulkProcess
+    {
+        $request = new GetBulkProcessStatusByIdRequest();
+        $request->setProcessIds($processIds);
+
+        [$bulkProcess, $status] = $this->client->GetBulkProcessStatusesByIds($request)->wait();
 
         if ($status->code !== STATUS_OK) {
             throw new UnableToGetBulkProcessException();

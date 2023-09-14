@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Uc\BulkProcess\BulkProcessExecutor\Client;
 
 use Bulkprocess\CreateBulkProcessRequest;
+use Bulkprocess\GetBulkProcessStatusByIdRequest;
 use Bulkprocess\GetBulkProcessStatusRequest;
 use Grpc\UnaryCall;
 
@@ -32,6 +33,19 @@ interface BulkProcessClientInterface
      */
     public function GetBulkProcessStatus(
         GetBulkProcessStatusRequest $getBulkProcessStatusRequest,
+        array $metadata = [],
+        array $options = [],
+    ): UnaryCall;
+
+    /**
+     * @param \Bulkprocess\GetBulkProcessStatusByIdRequest $getBulkProcessStatusesRequest
+     * @param array                                        $metadata
+     * @param array                                        $options
+     *
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBulkProcessStatusesByIds(
+        GetBulkProcessStatusByIdRequest $getBulkProcessStatusesRequest,
         array $metadata = [],
         array $options = [],
     ): UnaryCall;
