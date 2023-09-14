@@ -84,10 +84,10 @@ class BulkProcessExecutor
     /**
      * @param array $processIds
      *
-     * @return \Bulkprocess\BulkProcess
+     * @return \Bulkprocess\BulkProcess[]
      * @throws \Uc\BulkProcess\BulkProcessExecutor\Exceptions\UnableToGetBulkProcessException
      */
-    public function getBulkProcessByIds(array $processIds): BulkProcess
+    public function getBulkProcessByIds(array $processIds): array
     {
         $request = new GetBulkProcessStatusByIdRequest();
         $request->setProcessIds($processIds);
