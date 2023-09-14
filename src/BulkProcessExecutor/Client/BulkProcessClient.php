@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Uc\BulkProcess\BulkProcessExecutor\Client;
 
 use Bulkprocess\BulkProcess;
+use Bulkprocess\BulkProcessArray;
 use Bulkprocess\CreateBulkProcessRequest;
 use Bulkprocess\GetBulkProcessStatusByIdRequest;
 use Bulkprocess\GetBulkProcessStatusRequest;
@@ -55,6 +56,13 @@ class BulkProcessClient extends BaseStub implements BulkProcessClientInterface
         );
     }
 
+    /**
+     * @param \Bulkprocess\GetBulkProcessStatusByIdRequest $getBulkProcessStatusesRequest
+     * @param array                                        $metadata
+     * @param array                                        $options
+     *
+     * @return \Grpc\UnaryCall
+     */
     public function GetBulkProcessStatusesByIds(
         GetBulkProcessStatusByIdRequest $getBulkProcessStatusesRequest,
         array $metadata = [],
@@ -64,7 +72,7 @@ class BulkProcessClient extends BaseStub implements BulkProcessClientInterface
         return $this->_simpleRequest(
             '/bulkprocess.BulkProcessService/GetBulkProcessStatusByIds',
             $getBulkProcessStatusesRequest,
-            [BulkProcess::class, 'decode'],
+            [BulkProcessArray::class, 'decode'],
             $metadata,
             $options
         );
