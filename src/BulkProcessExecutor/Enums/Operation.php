@@ -13,4 +13,6 @@ enum Operation: int
     case DELETE = 2;
     case PUBLISH = 3;
     case UN_PUBLISH = 4;
+    case MAKE_VISIBLE = 5;
+    case MAKE_INVISIBLE = 6;
 }
