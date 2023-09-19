@@ -18,9 +18,9 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      */
     protected $project_id = 0;
     /**
-     * Generated from protobuf field <code>repeated int64 ids_to_process = 3;</code>
+     * Generated from protobuf field <code>repeated int64 string = 3;</code>
      */
-    private $ids_to_process;
+    private $string;
     /**
      * Generated from protobuf field <code>.bulkprocess.Entity entity = 7;</code>
      */
@@ -41,7 +41,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $string
      *     @type int $entity
      *     @type int $operation
      *     @type string $remote_host
@@ -75,23 +75,23 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 ids_to_process = 3;</code>
+     * Generated from protobuf field <code>repeated int64 string = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getIdsToProcess()
+    public function getString()
     {
-        return $this->ids_to_process;
+        return $this->string;
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 ids_to_process = 3;</code>
+     * Generated from protobuf field <code>repeated int64 string = 3;</code>
      * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setIdsToProcess($var)
+    public function setString($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
-        $this->ids_to_process = $arr;
+        $this->string = $arr;
 
         return $this;
     }

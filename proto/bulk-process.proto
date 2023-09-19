@@ -4,13 +4,13 @@ package bulkprocess;
 
 message BulkProcess {
   int64 project_id = 1;
-  repeated int64 completed_ids = 2;
-  repeated int64 ids_to_process = 3;
+  repeated string completed_ids = 2;
+  repeated string ids_to_process = 3;
   Status status = 4;
   Operation operation = 5;
   string process_id = 6;
   Entity entity = 7;
-  repeated int64 failed_ids = 8;
+  repeated string failed_ids = 8;
   string remote_host = 9;
 }
 message BulkProcessArray {
@@ -19,8 +19,8 @@ message BulkProcessArray {
 
 message BulkProcessNotificationRequest {
   string process_id = 1;
-  repeated int64 completed_Ids = 2;
-  repeated int64 failed_Ids = 3;
+  repeated string completed_Ids = 2;
+  repeated string failed_Ids = 3;
   Status status = 4;
 }
 
@@ -71,7 +71,7 @@ service BulkProcessNotificationService {
 
 message CreateBulkProcessRequest {
   int64 project_id = 1;
-  repeated int64 ids_to_process = 3;
+  repeated int64 string = 3;
   Entity entity = 7;
   Operation operation = 4;
   string remote_host = 9;

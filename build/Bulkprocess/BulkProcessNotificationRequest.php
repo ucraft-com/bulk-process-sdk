@@ -18,11 +18,11 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
      */
     protected $process_id = '';
     /**
-     * Generated from protobuf field <code>repeated int64 completed_Ids = 2;</code>
+     * Generated from protobuf field <code>repeated string completed_Ids = 2;</code>
      */
     private $completed_Ids;
     /**
-     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
+     * Generated from protobuf field <code>repeated string failed_Ids = 3;</code>
      */
     private $failed_Ids;
     /**
@@ -37,8 +37,8 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $process_id
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $completed_Ids
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $failed_Ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $completed_Ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $failed_Ids
      *     @type int $status
      * }
      */
@@ -70,7 +70,7 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 completed_Ids = 2;</code>
+     * Generated from protobuf field <code>repeated string completed_Ids = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getCompletedIds()
@@ -79,20 +79,20 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 completed_Ids = 2;</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated string completed_Ids = 2;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCompletedIds($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->completed_Ids = $arr;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
+     * Generated from protobuf field <code>repeated string failed_Ids = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFailedIds()
@@ -101,13 +101,13 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 failed_Ids = 3;</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated string failed_Ids = 3;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFailedIds($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->failed_Ids = $arr;
 
         return $this;
