@@ -71,7 +71,7 @@ service BulkProcessNotificationService {
 
 message CreateBulkProcessRequest {
   int64 project_id = 1;
-  repeated int64 string = 3;
+  repeated string ids_to_process = 3;
   Entity entity = 7;
   Operation operation = 4;
   string remote_host = 9;

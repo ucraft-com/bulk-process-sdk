@@ -18,9 +18,9 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      */
     protected $project_id = 0;
     /**
-     * Generated from protobuf field <code>repeated int64 string = 3;</code>
+     * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
      */
-    private $string;
+    private $ids_to_process;
     /**
      * Generated from protobuf field <code>.bulkprocess.Entity entity = 7;</code>
      */
@@ -41,7 +41,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $string
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $entity
      *     @type int $operation
      *     @type string $remote_host
@@ -75,23 +75,23 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 string = 3;</code>
+     * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getString()
+    public function getIdsToProcess()
     {
-        return $this->string;
+        return $this->ids_to_process;
     }
 
     /**
-     * Generated from protobuf field <code>repeated int64 string = 3;</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setString($var)
+    public function setIdsToProcess($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT64);
-        $this->string = $arr;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->ids_to_process = $arr;
 
         return $this;
     }
