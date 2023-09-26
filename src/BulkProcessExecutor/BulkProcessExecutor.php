@@ -55,7 +55,7 @@ class BulkProcessExecutor
         [$bulkProcess, $status] = $this->client->CreateBulkProcess($request)->wait();
 
         if ($status->code !== STATUS_OK) {
-            throw new BulkProcessCreationFailedException();
+            throw new BulkProcessCreationFailedException("Bulk process creation failed. {$status->details}", $status->code);
         }
 
         return $bulkProcess;
