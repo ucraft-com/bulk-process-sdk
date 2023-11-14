@@ -24,7 +24,7 @@ class GetBulkProcessStatusByIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $process_ids
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $process_ids
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class GetBulkProcessStatusByIdRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string process_ids = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setProcessIds($var)
