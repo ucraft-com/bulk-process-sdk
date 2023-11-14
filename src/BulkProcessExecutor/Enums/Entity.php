@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Uc\BulkProcess\BulkProcessExecutor\Enums;
 
-use Bulkprocess\Entity as ProtoEntityEnum;
-
 enum Entity: int
 {
     case PRODUCT = 0;
@@ -23,4 +21,7 @@ enum Entity: int
     case CART_RULE = 12;
     case PAGE = 13;
     case TEAM = 14;
+    case BOOKING = 15;
+    case EVENT_CATEGORY = 16;
+    case BOOKING_CATEGORY = 17;
 }
