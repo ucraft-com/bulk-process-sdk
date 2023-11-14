@@ -71,6 +71,18 @@ class Entity
      * Generated from protobuf enum <code>TEAM = 14;</code>
      */
     const TEAM = 14;
+    /**
+     * Generated from protobuf enum <code>BOOKING = 15;</code>
+     */
+    const BOOKING = 15;
+    /**
+     * Generated from protobuf enum <code>EVENT_CATEGORY = 16;</code>
+     */
+    const EVENT_CATEGORY = 16;
+    /**
+     * Generated from protobuf enum <code>BOOKING_CATEGORY = 17;</code>
+     */
+    const BOOKING_CATEGORY = 17;
 
     private static $valueToName = [
         self::PRODUCT => 'PRODUCT',
@@ -88,6 +100,9 @@ class Entity
         self::CART_RULE => 'CART_RULE',
         self::PAGE => 'PAGE',
         self::TEAM => 'TEAM',
+        self::BOOKING => 'BOOKING',
+        self::EVENT_CATEGORY => 'EVENT_CATEGORY',
+        self::BOOKING_CATEGORY => 'BOOKING_CATEGORY',
     ];
 
     public static function name($value)

@@ -37,8 +37,8 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $process_id
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $completed_Ids
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $failed_Ids
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $completed_Ids
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $failed_Ids
      *     @type int $status
      * }
      */
@@ -80,7 +80,7 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string completed_Ids = 2;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCompletedIds($var)
@@ -102,7 +102,7 @@ class BulkProcessNotificationRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string failed_Ids = 3;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFailedIds($var)

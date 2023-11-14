@@ -41,7 +41,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $entity
      *     @type int $operation
      *     @type string $remote_host
@@ -85,7 +85,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIdsToProcess($var)

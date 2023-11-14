@@ -57,13 +57,13 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $completed_ids
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $completed_ids
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $status
      *     @type int $operation
      *     @type string $process_id
      *     @type int $entity
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $failed_ids
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $failed_ids
      *     @type string $remote_host
      * }
      */
@@ -105,7 +105,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string completed_ids = 2;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCompletedIds($var)
@@ -127,7 +127,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIdsToProcess($var)
@@ -237,7 +237,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string failed_ids = 8;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFailedIds($var)

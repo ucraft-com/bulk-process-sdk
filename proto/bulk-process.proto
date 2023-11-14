@@ -57,6 +57,9 @@ enum Entity {
   CART_RULE = 12;
   PAGE = 13;
   TEAM = 14;
+  BOOKING = 15;
+  EVENT_CATEGORY = 16;
+  BOOKING_CATEGORY = 17;
 }
 
 service BulkProcessService {
