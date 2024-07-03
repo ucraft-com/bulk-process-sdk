@@ -60,6 +60,8 @@ enum Entity {
   BOOKING = 15;
   EVENT_CATEGORY = 16;
   BOOKING_CATEGORY = 17;
+  RENTAL = 18;
+  RENTAL_CATEGORY = 19;
 }
 
 service BulkProcessService {

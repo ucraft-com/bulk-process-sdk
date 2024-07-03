@@ -83,6 +83,14 @@ class Entity
      * Generated from protobuf enum <code>BOOKING_CATEGORY = 17;</code>
      */
     const BOOKING_CATEGORY = 17;
+    /**
+     * Generated from protobuf enum <code>RENTAL = 18;</code>
+     */
+    const RENTAL = 18;
+    /**
+     * Generated from protobuf enum <code>RENTAL_CATEGORY = 19;</code>
+     */
+    const RENTAL_CATEGORY = 19;
 
     private static $valueToName = [
         self::PRODUCT => 'PRODUCT',
@@ -103,6 +111,8 @@ class Entity
         self::BOOKING => 'BOOKING',
         self::EVENT_CATEGORY => 'EVENT_CATEGORY',
         self::BOOKING_CATEGORY => 'BOOKING_CATEGORY',
+        self::RENTAL => 'RENTAL',
+        self::RENTAL_CATEGORY => 'RENTAL_CATEGORY',
     ];
 
     public static function name($value)
