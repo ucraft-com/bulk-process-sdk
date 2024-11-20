@@ -26,4 +26,6 @@ enum Entity: int
     case BOOKING_CATEGORY = 17;
     case RENTAL = 18;
     case RENTAL_CATEGORY = 19;
+    case SUBSCRIPTION = 20;
+    case SUBSCRIPTION_CATEGORY = 21;
 }
