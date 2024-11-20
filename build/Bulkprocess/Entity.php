@@ -91,6 +91,14 @@ class Entity
      * Generated from protobuf enum <code>RENTAL_CATEGORY = 19;</code>
      */
     const RENTAL_CATEGORY = 19;
+    /**
+     * Generated from protobuf enum <code>SUBSCRIPTION = 20;</code>
+     */
+    const SUBSCRIPTION = 20;
+    /**
+     * Generated from protobuf enum <code>SUBSCRIPTION_CATEGORY = 21;</code>
+     */
+    const SUBSCRIPTION_CATEGORY = 21;
 
     private static $valueToName = [
         self::PRODUCT => 'PRODUCT',
@@ -113,6 +121,8 @@ class Entity
         self::BOOKING_CATEGORY => 'BOOKING_CATEGORY',
         self::RENTAL => 'RENTAL',
         self::RENTAL_CATEGORY => 'RENTAL_CATEGORY',
+        self::SUBSCRIPTION => 'SUBSCRIPTION',
+        self::SUBSCRIPTION_CATEGORY => 'SUBSCRIPTION_CATEGORY',
     ];
 
     public static function name($value)
