@@ -49,6 +49,10 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string remote_host = 9;</code>
      */
     protected $remote_host = '';
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     */
+    protected $workspace_name = '';
 
     /**
      * Constructor.
@@ -57,14 +61,15 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $completed_ids
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ids_to_process
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $completed_ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $status
      *     @type int $operation
      *     @type string $process_id
      *     @type int $entity
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $failed_ids
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $failed_ids
      *     @type string $remote_host
+     *     @type string $workspace_name
      * }
      */
     public function __construct($data = NULL) {
@@ -105,7 +110,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string completed_ids = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCompletedIds($var)
@@ -127,7 +132,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIdsToProcess($var)
@@ -237,7 +242,7 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string failed_ids = 8;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFailedIds($var)
@@ -266,6 +271,28 @@ class BulkProcess extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->remote_host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     * @return string
+     */
+    public function getWorkspaceName()
+    {
+        return $this->workspace_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setWorkspaceName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->workspace_name = $var;
 
         return $this;
     }

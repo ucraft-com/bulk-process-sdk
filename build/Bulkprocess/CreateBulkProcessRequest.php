@@ -33,6 +33,10 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string remote_host = 9;</code>
      */
     protected $remote_host = '';
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     */
+    protected $workspace_name = '';
 
     /**
      * Constructor.
@@ -41,10 +45,11 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $project_id
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ids_to_process
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids_to_process
      *     @type int $entity
      *     @type int $operation
      *     @type string $remote_host
+     *     @type string $workspace_name
      * }
      */
     public function __construct($data = NULL) {
@@ -85,7 +90,7 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string ids_to_process = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIdsToProcess($var)
@@ -158,6 +163,28 @@ class CreateBulkProcessRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->remote_host = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     * @return string
+     */
+    public function getWorkspaceName()
+    {
+        return $this->workspace_name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string workspace_name = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setWorkspaceName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->workspace_name = $var;
 
         return $this;
     }
