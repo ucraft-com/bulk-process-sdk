@@ -12,6 +12,7 @@ message BulkProcess {
   Entity entity = 7;
   repeated string failed_ids = 8;
   string remote_host = 9;
+  string workspace_name = 10;
 }
 message BulkProcessArray {
   repeated BulkProcess data = 1;
@@ -82,6 +83,7 @@ message CreateBulkProcessRequest {
   Entity entity = 7;
   Operation operation = 4;
   string remote_host = 9;
+  string workspace_name = 10;
 }
 
 message GetBulkProcessStatusRequest {

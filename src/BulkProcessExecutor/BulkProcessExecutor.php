@@ -44,6 +44,7 @@ class BulkProcessExecutor
         Entity $entity,
         Operation $operation,
         string $remoteHost,
+        string $workspaceName,
     ): BulkProcess {
         $request = new CreateBulkProcessRequest();
         $request->setProjectId($projectId);
@@ -51,6 +52,7 @@ class BulkProcessExecutor
         $request->setEntity($entity->value);
         $request->setOperation($operation->value);
         $request->setRemoteHost($remoteHost);
+        $request->setWorkspaceName($workspaceName);
 
         [$bulkProcess, $status] = $this->client->CreateBulkProcess($request)->wait();
 
