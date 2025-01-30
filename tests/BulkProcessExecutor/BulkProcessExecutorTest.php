@@ -32,7 +32,8 @@ class BulkProcessExecutorTest extends TestCase
             ],
             Entity::PRODUCT,
             Operation::DELETE,
-            'builder.ucraft.dev'
+            'builder.ucraft.dev',
+            'acme',
         );
 
         $this->assertInstanceOf(BulkProcess::class, $bulkProcess);
@@ -69,7 +70,8 @@ class BulkProcessExecutorTest extends TestCase
             ],
             Entity::PRODUCT,
             Operation::DELETE,
-            'builder.ucraft.dev'
+            'builder.ucraft.dev',
+            'acme',
         );
 
         $bulkProcess = $executor->getBulkProcess($createdBulkProcess->getProcessId());
